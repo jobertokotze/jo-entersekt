@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170829 16:10:30.950" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\ROBOT_TESTS\jo-todolist-tester.robot" id="s1" name="Jo-Todolist-Tester">
+<test id="s1-t1" name="Open_Connection">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://${Host}:${port}</arg>
+<arg>browser=Firefox</arg>
+<arg>alias=guest</arg>
+</arguments>
+<msg timestamp="20170829 16:10:31.834" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8080'</msg>
+<status status="PASS" endtime="20170829 16:10:38.315" starttime="20170829 16:10:31.833"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Jo todolist</arg>
+</arguments>
+<msg timestamp="20170829 16:10:38.355" level="INFO">Page title is 'Jo todolist'.</msg>
+<status status="PASS" endtime="20170829 16:10:38.358" starttime="20170829 16:10:38.316"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Jo todolist</arg>
+</arguments>
+<msg timestamp="20170829 16:10:38.381" level="INFO">Current page contains text 'Jo todolist'.</msg>
+<status status="PASS" endtime="20170829 16:10:38.381" starttime="20170829 16:10:38.359"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>What shoud I do?</arg>
+</arguments>
+<msg timestamp="20170829 16:10:38.396" level="INFO">Current page contains text 'What shoud I do?'.</msg>
+<status status="PASS" endtime="20170829 16:10:38.397" starttime="20170829 16:10:38.381"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170829 16:10:38.454" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170829 16:10:38.454" starttime="20170829 16:10:38.397"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170829 16:10:38.697" starttime="20170829 16:10:38.455"></status>
+</kw>
+<doc>See if we can connect to the url and take a screenshot.</doc>
+<status status="PASS" endtime="20170829 16:10:38.697" critical="yes" starttime="20170829 16:10:31.831"></status>
+</test>
+<test id="s1-t2" name="Clear_Todolist">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://${Host}:${port}</arg>
+<arg>browser=Firefox</arg>
+<arg>alias=guest</arg>
+</arguments>
+<msg timestamp="20170829 16:10:38.701" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8080'</msg>
+<status status="PASS" endtime="20170829 16:10:44.139" starttime="20170829 16:10:38.700"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>clr_btn_submit</arg>
+</arguments>
+<msg timestamp="20170829 16:10:44.141" level="INFO">Clicking button 'clr_btn_submit'.</msg>
+<status status="PASS" endtime="20170829 16:10:44.342" starttime="20170829 16:10:44.140"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170829 16:10:44.408" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170829 16:10:44.408" starttime="20170829 16:10:44.342"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170829 16:10:44.636" starttime="20170829 16:10:44.409"></status>
+</kw>
+<doc>Run the reset todolist to clear all items and take a screenshot.</doc>
+<status status="PASS" endtime="20170829 16:10:44.637" critical="yes" starttime="20170829 16:10:38.698"></status>
+</test>
+<test id="s1-t3" name="Add_Users">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://${Host}:${port}</arg>
+<arg>browser=Firefox</arg>
+<arg>alias=guest</arg>
+</arguments>
+<msg timestamp="20170829 16:10:44.643" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8080'</msg>
+<status status="PASS" endtime="20170829 16:10:50.059" starttime="20170829 16:10:44.642"></status>
+</kw>
+<kw name="Add_todo_Clean room">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>newtodo</arg>
+<arg>${todo_item}</arg>
+</arguments>
+<msg timestamp="20170829 16:10:50.062" level="INFO">Typing text 'Clean room' into text field 'newtodo'</msg>
+<status status="PASS" endtime="20170829 16:10:50.202" starttime="20170829 16:10:50.061"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>add_btn_submit</arg>
+</arguments>
+<msg timestamp="20170829 16:10:50.204" level="INFO">Clicking button 'add_btn_submit'.</msg>
+<status status="PASS" endtime="20170829 16:10:50.315" starttime="20170829 16:10:50.203"></status>
+</kw>
+<status status="PASS" endtime="20170829 16:10:50.316" starttime="20170829 16:10:50.060"></status>
+</kw>
+<kw name="Add_todo_Call mom">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>newtodo</arg>
+<arg>${todo_item}</arg>
+</arguments>
+<msg timestamp="20170829 16:10:50.318" level="INFO">Typing text 'Call mom' into text field 'newtodo'</msg>
+<status status="PASS" endtime="20170829 16:10:50.405" starttime="20170829 16:10:50.317"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>add_btn_submit</arg>
+</arguments>
+<msg timestamp="20170829 16:10:50.407" level="INFO">Clicking button 'add_btn_submit'.</msg>
+<status status="PASS" endtime="20170829 16:10:50.485" starttime="20170829 16:10:50.407"></status>
+</kw>
+<status status="PASS" endtime="20170829 16:10:50.486" starttime="20170829 16:10:50.316"></status>
+</kw>
+<kw name="Add_todo_Call brother">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>newtodo</arg>
+<arg>${todo_item}</arg>
+</arguments>
+<msg timestamp="20170829 16:10:50.489" level="INFO">Typing text 'Call brother' into text field 'newtodo'</msg>
+<status status="PASS" endtime="20170829 16:10:50.571" starttime="20170829 16:10:50.488"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>add_btn_submit</arg>
+</arguments>
+<msg timestamp="20170829 16:10:50.573" level="INFO">Clicking button 'add_btn_submit'.</msg>
+<status status="PASS" endtime="20170829 16:10:50.649" starttime="20170829 16:10:50.572"></status>
+</kw>
+<status status="PASS" endtime="20170829 16:10:50.650" starttime="20170829 16:10:50.486"></status>
+</kw>
+<kw name="Add_todo_Buy milk">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>newtodo</arg>
+<arg>${todo_item}</arg>
+</arguments>
+<msg timestamp="20170829 16:10:50.652" level="INFO">Typing text 'Buy milk' into text field 'newtodo'</msg>
+<status status="PASS" endtime="20170829 16:10:50.771" starttime="20170829 16:10:50.651"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>add_btn_submit</arg>
+</arguments>
+<msg timestamp="20170829 16:10:50.773" level="INFO">Clicking button 'add_btn_submit'.</msg>
+<status status="PASS" endtime="20170829 16:10:50.858" starttime="20170829 16:10:50.772"></status>
+</kw>
+<status status="PASS" endtime="20170829 16:10:50.858" starttime="20170829 16:10:50.650"></status>
+</kw>
+<kw type="teardown" name="Close_Session">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170829 16:10:50.927" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170829 16:10:50.927" starttime="20170829 16:10:50.860"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170829 16:10:51.149" starttime="20170829 16:10:50.928"></status>
+</kw>
+<status status="PASS" endtime="20170829 16:10:51.150" starttime="20170829 16:10:50.859"></status>
+</kw>
+<doc>Adding items to the testcase:
+
+1. Clean room
+2. Call mom
+3. Call brother
+4. Buy milk
+
+Take a screenshot.</doc>
+<status status="PASS" endtime="20170829 16:10:51.150" critical="yes" starttime="20170829 16:10:44.639"></status>
+</test>
+<test id="s1-t4" name="Rename_Todo_Item">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://${Host}:${port}</arg>
+<arg>browser=Firefox</arg>
+<arg>alias=guest</arg>
+</arguments>
+<msg timestamp="20170829 16:10:51.154" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8080'</msg>
+<status status="PASS" endtime="20170829 16:10:56.602" starttime="20170829 16:10:51.153"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>updatetodo_1</arg>
+<arg>Call sister</arg>
+</arguments>
+<msg timestamp="20170829 16:10:56.604" level="INFO">Typing text 'Call sister' into text field 'updatetodo_1'</msg>
+<status status="PASS" endtime="20170829 16:10:56.771" starttime="20170829 16:10:56.603"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>edit_btn_submit_1</arg>
+</arguments>
+<msg timestamp="20170829 16:10:56.772" level="INFO">Clicking button 'edit_btn_submit_1'.</msg>
+<status status="PASS" endtime="20170829 16:10:56.888" starttime="20170829 16:10:56.771"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>updatetodo_2</arg>
+<arg>Buy bread</arg>
+</arguments>
+<msg timestamp="20170829 16:10:56.890" level="INFO">Typing text 'Buy bread' into text field 'updatetodo_2'</msg>
+<status status="PASS" endtime="20170829 16:10:56.983" starttime="20170829 16:10:56.889"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>edit_btn_submit_2</arg>
+</arguments>
+<msg timestamp="20170829 16:10:56.985" level="INFO">Clicking button 'edit_btn_submit_2'.</msg>
+<status status="PASS" endtime="20170829 16:10:57.063" starttime="20170829 16:10:56.984"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170829 16:10:57.127" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170829 16:10:57.128" starttime="20170829 16:10:57.064"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170829 16:10:57.385" starttime="20170829 16:10:57.128"></status>
+</kw>
+<doc>Testing the rename feature and taking a screenshot.
+
+Renaming "Call mom" to "Call sister" and "Call brother" to "Buy bread".</doc>
+<status status="PASS" endtime="20170829 16:10:57.385" critical="yes" starttime="20170829 16:10:51.152"></status>
+</test>
+<test id="s1-t5" name="Delete_Todo_Item">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://${Host}:${port}</arg>
+<arg>browser=Firefox</arg>
+<arg>alias=guest</arg>
+</arguments>
+<msg timestamp="20170829 16:10:57.390" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8080'</msg>
+<status status="PASS" endtime="20170829 16:11:02.860" starttime="20170829 16:10:57.389"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>delete_btn_0</arg>
+</arguments>
+<msg timestamp="20170829 16:11:02.861" level="INFO">Clicking link 'delete_btn_0'.</msg>
+<status status="PASS" endtime="20170829 16:11:03.044" starttime="20170829 16:11:02.861"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>delete_btn_2</arg>
+</arguments>
+<msg timestamp="20170829 16:11:03.046" level="INFO">Clicking link 'delete_btn_2'.</msg>
+<status status="PASS" endtime="20170829 16:11:03.159" starttime="20170829 16:11:03.045"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170829 16:11:03.238" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170829 16:11:03.239" starttime="20170829 16:11:03.159"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170829 16:11:03.458" starttime="20170829 16:11:03.239"></status>
+</kw>
+<doc>Testing the delete feature and taking a screenshot.
+
+Delete Id 0 and 2.</doc>
+<status status="PASS" endtime="20170829 16:11:03.458" critical="yes" starttime="20170829 16:10:57.388"></status>
+</test>
+<test id="s1-t6" name="Test_For_XSS">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://${Host}:${port}</arg>
+<arg>browser=Firefox</arg>
+<arg>alias=guest</arg>
+</arguments>
+<msg timestamp="20170829 16:11:03.461" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8080'</msg>
+<status status="PASS" endtime="20170829 16:11:08.910" starttime="20170829 16:11:03.461"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>newtodo</arg>
+<arg>&lt;script&gt;alert(1)&lt;/script&gt;</arg>
+</arguments>
+<msg timestamp="20170829 16:11:08.912" level="INFO">Typing text '&lt;script&gt;alert(1)&lt;/script&gt;' into text field 'newtodo'</msg>
+<status status="PASS" endtime="20170829 16:11:09.088" starttime="20170829 16:11:08.911"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>add_btn_submit</arg>
+</arguments>
+<msg timestamp="20170829 16:11:09.090" level="INFO">Clicking button 'add_btn_submit'.</msg>
+<status status="PASS" endtime="20170829 16:11:09.212" starttime="20170829 16:11:09.089"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>&lt;script&gt;alert(1)&lt;/script&gt;</arg>
+</arguments>
+<msg timestamp="20170829 16:11:09.240" level="INFO">Current page contains text '&lt;script&gt;alert(1)&lt;/script&gt;'.</msg>
+<status status="PASS" endtime="20170829 16:11:09.241" starttime="20170829 16:11:09.213"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170829 16:11:09.311" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170829 16:11:09.311" starttime="20170829 16:11:09.242"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170829 16:11:09.546" starttime="20170829 16:11:09.312"></status>
+</kw>
+<doc>Testing for XSS vulnerability and taking a snapshot.</doc>
+<status status="PASS" endtime="20170829 16:11:09.547" critical="yes" starttime="20170829 16:11:03.459"></status>
+</test>
+<doc>Jo-todolist testing</doc>
+<status status="PASS" endtime="20170829 16:11:09.549" starttime="20170829 16:10:31.006"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="6">Critical Tests</stat>
+<stat fail="0" pass="6">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Jo-Todolist-Tester" pass="6">Jo-Todolist-Tester</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

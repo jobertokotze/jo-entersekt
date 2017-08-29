@@ -1,0 +1,21 @@
+{
+  "name": "jo-todolist",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "ejs": "^2.5.5",
+    "escape-html": "^1.0.3",
+    "express": "^4.14.0",
+    "json": "^9.0.6",
+    "json-stringify": "^1.0.0"
+  },
+  "author": "jobertokotze@gmail.com",
+  "description": "Basic to do list exercise",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}

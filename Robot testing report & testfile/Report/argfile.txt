@@ -1,0 +1,6 @@
+--outputdir
+c:\users\jobert~1.kot\appdata\local\temp\RIDEij3kq9.d
+-C
+off
+-W
+133

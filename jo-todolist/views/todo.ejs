@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Jo todolist</title>
+        <style>
+            a {text-decoration: none; color: black;}
+        </style>
+    </head>
+
+    <body>
+        <h1>Jo todolist</h1>
+        <ul>
+        <% todolist.forEach(function(todo, index) { %>
+            <li>                
+                <!--<%- todo %>--> 
+                         
+                <form action="/todo/edit/<%= index %>" method="post">
+                    <a href="/todo/delete/<%= index %>" id="delete_btn_<%= index %>">✘</a>
+                    <label for="updatetodo">✎</label><%- todo %> 
+                    <input type="text" name="updatetodo" id="updatetodo_<%= index %>"/>
+                    <input type="submit" name="edit_btn_submit" value="Rename" id="edit_btn_submit_<%= index %>"/>
+                </form>
+                
+            </li>
+        <% }); %>
+        
+        </ul>       
+
+        <form action="/todo/add/" method="post">
+            <p>
+                <label for="newtodo">What shoud I do?</label>
+                <input type="text" name="newtodo" id="newtodo" autofocus />
+                <input type="submit" value="Submit" id="add_btn_submit"/>                                
+            </p>
+        </form>
+        <form action="/todo/clear/" method="post">
+            <p>
+                <input type="submit" value="Reset" id="clr_btn_submit"/>
+            </p>
+        </form>
+    </body>
+</html>
+
+
